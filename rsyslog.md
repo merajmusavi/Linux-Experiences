@@ -19,4 +19,9 @@ If you want to configure your server as a log server in your company, here's a h
 # module(load="imtcp")
 # input(type="imtcp" port="514")
 ```
+## Configuring Your Server to send logs into log server
+if you want to configure your server to send logs into log server, here is a hint you need to know: in the `/etc/rsyslog.conf` file, you have to write this commands to done this task
+
+- send as udp: `*.* @<remote-server>:514`
+- send as tcp: `*.* @@<remote-server>:514`
 
